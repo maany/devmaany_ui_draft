@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-
+	
     <!-- github calendar css -->
     <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css"
 />
@@ -27,6 +27,8 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- Carousel CSS-->
+    <link id="carousel-style" rel="stylesheet" href="assets/css/carousel.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -63,7 +65,21 @@
                         <h2 class="heading">Recent Activities  </h2>
                         <div class="content">
                             <p>Hi! I am a motivated and inquisitive Electronics and Communication Engineering Junior at National Institue of Technology, Delhi. I have a strong tech stack(Java, Web, Android, Game Engine, Hardware development) and rich  project experience including Google Summer of Code 2014, 2015, FOSS contributions, engineering/desiging API's for software firms/ startups and a couple of major hackathons (Education Category winner at HackHarvard 2015). I like to learn new tech and build projects that show why technology is awesome. </p>
-</div><!--//content-->
+  <div id=carousel>
+<figure id=spinner>
+<img src = "C:\Users\Mayank\Pictures\Nexus 10\IMG_20141212_122139.jpg"alt="1">
+<img alt="2">
+<img alt="3">
+<img alt="4">
+<img alt="5">
+<img alt="6">
+<img  alt="7">
+<img alt="8">
+</figure>
+</div>
+<span style=float:left class=ss-icon onclick="galleryspin('-')">&lt;</span>
+<span style=float:right class=ss-icon onclick="galleryspin('')">&gt;</span>
+				</div><!--//content-->
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
@@ -276,15 +292,14 @@
                         <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget.
 
                         <div id="github-graph" class="github-graph">
-						<script>
-    GitHubCalendar(".github-graph", "maany");
-</script>
+						
 
                         </div><!--//github-graph-->
 
                         <p>You can also embed your GitHub activities using Casey Scarborough's <a href="http://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget.
                         <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->
                         <div id="ghfeed" class="ghfeed">
+                        
                         </div><!--//ghfeed-->
 
                     </div><!--//secton-inner-->
@@ -577,8 +592,10 @@
     <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
     <!-- github activity plugin -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
+    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js">GitHubActivity.feed({ username: "maany", selector: "#ghfeed" });</script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- carousel js -->
+	<script type="text/javascript" src="assets/js/carousel.js"></script>
 </body>
 </html>
